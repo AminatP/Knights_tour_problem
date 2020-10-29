@@ -13,7 +13,7 @@ const pathCol = [1, 2, 2, 1, -1, -2, -2, -1];
 
 
 const findKnightsTour = (board, row, col, move ) =>{
- /* A utility function that will print the final result */
+ /* A utility function that returns true once knights toure is solved */
   if(move  === 25){
     for(let i = 0; i < 5; i ++){
       for(let j = 0; j < 5; j ++){
@@ -30,15 +30,15 @@ const findKnightsTour = (board, row, col, move ) =>{
 			let newCol = col+pathCol[index];
 			if(ifValidMove(board, newRow, newCol)){
 				move++
-
         board[newRow][newCol] = move;
-        //this is the recursive part
+        //recursive part if function returns true
 				if(findKnightsTour(board, newRow, newCol, move)){
 					return true;
-        }
-        //this is the bakctracking part
-				move--;
-				board[newRow][newCol] = 0
+        }else{
+					//bakctracking part that sets board to 0s
+					move--;
+					board[newRow][newCol] = 0
+				}
 			}
 		}
 	}
