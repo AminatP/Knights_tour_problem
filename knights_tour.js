@@ -13,7 +13,7 @@ const pathCol = [1, 2, 2, 1, -1, -2, -2, -1];
 
 
 const findKnightsTour = (board, row, col, move ) =>{
- /* A utility function that returns true once knights toure is solved */
+ /* A utility function that returns true once knights tour is solved */
   if(move  === 25){
     for(let i = 0; i < 5; i ++){
       for(let j = 0; j < 5; j ++){
