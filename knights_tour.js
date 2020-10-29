@@ -7,8 +7,11 @@ for(let i= 0; i< 5; i++){
 	}
 }
 
+//moves possible by knight
 const pathRow = [2, 1, -1, -2, -2, -1, 1, 2];
 const pathCol = [1, 2, 2, 1, -1, -2, -2, -1];
+
+
 
 const findKnightsTour = (board, row, col, move ) =>{
  /* A utility function to print solution matrix board[N][N] */
