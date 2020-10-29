@@ -1,5 +1,5 @@
 const board = []
-//this makes board with zeroes
+//creats board filled with zeroes
 for(let i= 0; i< 5; i++){
 	board.push([]);
 	for(let j= 0; j< 5; j++){
@@ -7,9 +7,10 @@ for(let i= 0; i< 5; i++){
 	}
 }
 
-
 const pathRow = [2, 1, -1, -2, -2, -1, 1, 2];
 const pathCol = [1, 2, 2, 1, -1, -2, -2, -1];
+
+
 
 const findKnightsTour = (board, row, col, move ) =>{
  /* A utility function that will print the final result */
