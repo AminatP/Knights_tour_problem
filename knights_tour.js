@@ -7,17 +7,18 @@ for(let i= 0; i< 5; i++){
 	}
 }
 
+
 const pathRow = [2, 1, -1, -2, -2, -1, 1, 2];
 const pathCol = [1, 2, 2, 1, -1, -2, -2, -1];
 
 const findKnightsTour = (board, row, col, move ) =>{
- /* A utility function to print solution matrix board[N][N] */
+ /* A utility function that will print the final result */
   if(move  === 25){
     for(let i = 0; i < 5; i ++){
       for(let j = 0; j < 5; j ++){
         continue;
       }
-    }
+		}
 		console.log(board)
 		return true;
 
@@ -50,4 +51,4 @@ const ifValidMove = (board, newRow, newCol) => {
 	return false
 }
 
-findKnightsTour(board, 0, 0, 1)
+console.log(findKnightsTour(board, 0, 0, 1))
